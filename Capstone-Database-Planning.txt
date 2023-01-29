@@ -1,5 +1,42 @@
 ﻿sql designer keyword: lagerlogger
 
+
+batch
+* HAS MANY turn
+   * HAS ONE batch
+   * HAS MANY employee
+   * HAS ONE fermenter
+* HAS ONE fermentation_tracker
+   * HAS ONE batch
+   * HAS ONE fermenter
+   * HAS MANY employee
+* HAS ONE fermenter
+   * HAS ONE batch
+* HAS ONE cellar_tracker
+   * HAS ONE batch
+   * HAS MANY task
+   * HAS MANY employee
+* HAS ONE packaging_tracker
+   * HAS ONE batch
+   * HAS MANY employee
+   * HAS ONE Fermenter
+* HAS MANY task
+   * HAS ONE employee
+   * HAS ONE batch
+   * HAS ONE cellar_tracker
+   * HAS ONE fermenter
+
+
+employee
+* HAS MANY task
+
+
+
+
+
+
+
+
 BATCH TABLE
 * General Info        -
 Bach # 
@@ -43,7 +80,7 @@ Hops:
 
 
 
-FERMENTATION TABLE
+FERMENTATION_TRACKER TABLE
 Batch_ID
 Day Number:
 Date:
@@ -55,3 +92,31 @@ pH
 VDK
 Req Actions
 Comments
+
+
+FERMENTER
+Fermenter #:
+Brand:
+Volume:
+Max Volume:
+Type: (Transport, Uni, brite)
+Carb Stone Type: 
+Current Temp:
+Location:
+Status: (Occupied, Empty, Dumped, Rinsed, Clean, Sanitized, etc)
+Batch_ID:
+
+
+CELLAR TABLE
+
+
+PACKAGING TABLE
+
+
+EMPLOYEE TABLE
+
+
+TASK TABLE
+
+
+YEAST TABLE
