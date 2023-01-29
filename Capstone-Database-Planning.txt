@@ -1,0 +1,57 @@
+﻿sql designer keyword: lagerlogger
+
+BATCH TABLE
+* General Info        -
+Bach # 
+Brand:
+Style:
+Volume:
+Status: (Planned, InProgress, Complete, Archived)
+
+
+* Yeast Info        -
+Yeast_ID:
+Generation:
+Yeast Pitch Amount in lbs:
+(Yeast from) batch_ID:
+
+
+* Fermentation Info        -
+FV Number
+Fermentation_Tracker_ID:
+
+
+* Turn Info        -
+
+
+Number of Turns:
+Turn_ID:
+
+
+
+
+TURN TABLE
+Turn #
+Batch_ID
+Turn Volume:
+Mash Temp:
+
+
+Grain Bill:
+Hops:
+
+
+
+
+FERMENTATION TABLE
+Batch_ID
+Day Number:
+Date:
+Time:
+Set F
+Actual F
+Plato
+pH
+VDK
+Req Actions
+Comments
